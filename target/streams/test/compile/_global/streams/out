@@ -1,0 +1,5 @@
+[warn] -- Warning: C:\Users\micha\IdeaProjects\compiler\src\test\scala\compiler\lexical\KeywordParserTest.scala:19:2 
+[warn] 19 |  it should "Should parse keywords" in {
+[warn]    |  ^
+[warn]    |  Line is indented too far to the left, or a `}` is missing
+[warn] one warning found

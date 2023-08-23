@@ -1,0 +1,6 @@
+[debug] [zinc] IncrementalCompile -----------
+[debug] IncrementalCompile.incrementalCompile
+[debug] previous = Stamps for: 11 products, 10 sources, 8 libraries
+[debug] current source = Set(${BASE}/src/test/scala/compiler/expression/IdentifierParserTest.scala, ${BASE}/src/test/scala/compiler/lexical/LexicalParserTest.scala, ${BASE}/src/test/scala/compiler/statement/IfStatementParserTest.scala, ${BASE}/src/test/scala/compiler/expression/NumberParserTest.scala, ${BASE}/src/test/scala/compiler/statement/AssignmentParserTest.scala, ${BASE}/src/test/scala/compiler/expression/AExpressionParserTest.scala, ${BASE}/src/test/scala/compiler/statement/ModelParserTest.scala, ${BASE}/src/test/scala/compiler/lexical/KeywordParserTest.scala, ${BASE}/src/test/scala/compiler/expression/NameParserTest.scala, ${BASE}/src/test/scala/compiler/TestUtil.scala)
+[debug] > initialChanges = InitialChanges(Changes(added = Set(), removed = Set(), changed = Set(), unmodified = ...),Set(),Set(),API Changes: Set())
+[debug] No changes
