@@ -1,7 +1,6 @@
 package compiler.lexical
 
-import compiler.AST.*
-import compiler.{ExpressionParser, LexicalParser, TestUtil}
+import compiler.ast.Ast.*
 import fastparse.Parsed
 import org.scalatest.flatspec.AnyFlatSpec
 import org.scalatest.matchers.should
@@ -9,6 +8,8 @@ import org.scalatest.matchers.should
 import scala.collection.mutable.ArrayBuffer
 
 import fastparse._, NoWhitespace._
+import compiler.parser.{ExpressionParser, LexicalParser}
+import compiler.utils.TestUtil
 
 import scala.util.Failure
 

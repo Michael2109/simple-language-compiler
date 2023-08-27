@@ -1,0 +1,10 @@
+package integration
+
+class AssignmentTest {
+
+  let main(args:Int): Unit {
+    let x: Int = 10
+
+    println(x)
+  }
+}

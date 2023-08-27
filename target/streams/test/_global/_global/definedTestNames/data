@@ -1,1 +1,0 @@
-["compiler.expression.NameParserTest","compiler.expression.AExpressionParserTest","compiler.statement.ModelParserTest","compiler.expression.NumberParserTest","compiler.lexical.KeywordParserTest","compiler.expression.IdentifierParserTest","compiler.statement.IfStatementParserTest","compiler.lexical.LexicalParserTest","compiler.statement.AssignmentParserTest"]

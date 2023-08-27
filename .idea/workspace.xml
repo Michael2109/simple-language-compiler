@@ -3,61 +3,457 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
-  <component name="BspLocalSettings">
-    <option name="availableProjects">
-      <map>
-        <entry>
-          <key>
-            <ExternalProjectPojo>
-              <option name="name" value="compiler" />
-              <option name="path" value="$PROJECT_DIR$" />
-            </ExternalProjectPojo>
-          </key>
-          <value>
-            <list>
-              <ExternalProjectPojo>
-                <option name="name" value="file:/$PROJECT_DIR$/#root/Compile" />
-                <option name="path" value="C:\Users\micha\IdeaProjects\compiler" />
-              </ExternalProjectPojo>
-              <ExternalProjectPojo>
-                <option name="name" value="file:/$PROJECT_DIR$/#root-build" />
-                <option name="path" value="C:\Users\micha\IdeaProjects\compiler" />
-              </ExternalProjectPojo>
-            </list>
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="projectSyncType">
-      <map>
-        <entry key="$PROJECT_DIR$" value="RE_IMPORT" />
-      </map>
-    </option>
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="35fe1c8d-0417-4314-9979-acf8b23a902b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/scala_compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/scala_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.sbt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/build.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/compiler/Ast.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/compiler/ExpressionParser.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/compiler/LexicalParser.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/compiler/StatementParser.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/compiler/main.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/scala/compiler/TestUtil.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/scala/compiler/expression/AExpressionParserTest.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/scala/compiler/expression/IdentifierParserTest.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/scala/compiler/expression/NameParserTest.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/scala/compiler/expression/NumberParserTest.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/scala/compiler/lexical/KeywordParserTest.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/scala/compiler/lexical/LexicalParserTest.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/scala/compiler/statement/IfStatementParserTest.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/scala/compiler/statement/ModelParserTest.scala" afterDir="false" />
+    <list default="true" id="811461ce-d18c-4a88-99a6-d7a3b29d3c35" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__com_lihaoyi_fastparse_3_3_0_2_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__com_lihaoyi_geny_3_1_0_0_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__com_lihaoyi_sourcecode_3_0_3_0_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_scala_lang_modules_scala_asm_9_5_0_scala_1_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_scala_lang_modules_scala_xml_3_2_1_0_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_scala_lang_scala3_library_3_3_3_0_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_scala_lang_scala_library_2_13_10_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_scalactic_scalactic_3_3_2_16_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_scalatest_scalatest_3_3_2_16_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_scalatest_scalatest_compatible_3_2_16_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_scalatest_scalatest_core_3_3_2_16_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_scalatest_scalatest_diagrams_3_3_2_16_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_scalatest_scalatest_featurespec_3_3_2_16_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_scalatest_scalatest_flatspec_3_3_2_16_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_scalatest_scalatest_freespec_3_3_2_16_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_scalatest_scalatest_funspec_3_3_2_16_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_scalatest_scalatest_funsuite_3_3_2_16_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_scalatest_scalatest_matchers_core_3_3_2_16_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_scalatest_scalatest_mustmatchers_3_3_2_16_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_scalatest_scalatest_propspec_3_3_2_16_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_scalatest_scalatest_refspec_3_3_2_16_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_scalatest_scalatest_shouldmatchers_3_3_2_16_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_scalatest_scalatest_wordspec_3_3_2_16_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/compiler-build.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/compiler.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sbt.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/compiler/ast/AstToJavaAst.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/compiler/ast/JavaAstNode.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/compiler/code_gen/CodeGen.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/compiler/compiler/Compiler.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/compiler/compiler/CompilerExecutor.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/cobalt/integration/AssignmentTest.cobalt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/cobalt/integration/IdentifierTest.cobalt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/cobalt/integration/IfStatementTest.cobalt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/cobalt/integration/MethodCallTest.cobalt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/cobalt/integration/NumberTest.cobalt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/cobalt/integration/StringLiteralTest.cobalt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/cobalt/snake/Snake.cobalt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/log4j.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/scala/compiler/integration/AssignmentCompileTest.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/scala/compiler/statement/ModuleParserTest.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/scala/compiler/utils/CompilerUtil.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.bsp/sbt.json" beforeDir="false" afterPath="$PROJECT_DIR$/.bsp/sbt.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/bsp.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__actions_2_12_1_9_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__caffeine_2_8_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__checker_qual_3_4_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__collections_2_12_1_9_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__command_2_12_1_9_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__compiler_bridge_2_12_1_9_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__compiler_interface_1_9_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__completion_2_12_1_9_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__config_1_4_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__core_macros_2_12_1_9_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__disruptor_3_4_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__error_prone_annotations_2_4_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__fastparse_3_3_0_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__file_tree_views_2_1_10.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__geny_3_1_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__gigahorse_apache_http_2_12_0_7_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__gigahorse_core_2_12_0_7_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__io_2_12_1_9_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__ipcsocket_1_6_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__ivy_2_3_0_sbt_a8f9eb5bf09d0539ea3658a2c2d4e09755b5133e.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__jansi_2_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__jline_2_14_7_sbt_a1b0ffbb8f64bb820f4f84a0c07a0c0964507493.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__jline_builtins_3_19_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__jline_reader_3_19_0__1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__jline_style_3_19_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__jline_terminal_3_19_0__1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__jline_terminal_jansi_3_19_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__jline_terminal_jna_3_19_0__1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__jna_5_13_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__jna_platform_5_13_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__jsch_0_1_54.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__launcher_interface_1_4_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__librarymanagement_core_2_12_1_9_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__librarymanagement_ivy_2_12_1_9_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__lm_coursier_shaded_2_12_2_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__log4j_api_2_17_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__log4j_core_2_17_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__log4j_slf4j_impl_2_17_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__logic_2_12_1_9_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__main_2_12_1_9_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__main_settings_2_12_1_9_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__protocol_2_12_1_9_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__reactive_streams_1_0_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__run_2_12_1_9_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__sbinary_2_12_0_5_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__sbt_1_9_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__scala3_library_3_3_3_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__scala_collection_compat_2_12_2_9_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__scala_compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__scala_compiler_2_12_18.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__scala_library.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__scala_library_2_12_18.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__scala_library_2_13_10.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__scala_parser_combinators_2_12_1_1_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__scala_reflect.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__scala_reflect_2_12_18.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__scala_xml_2_12_2_1_0__1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__scala_xml_2_12_2_1_0__2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__scala_xml_3_2_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__scalactic_3_3_2_16.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__scalatest_3_3_2_16.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__scalatest_compatible_3_2_16.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__scalatest_core_3_3_2_16.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__scalatest_diagrams_3_3_2_16.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__scalatest_featurespec_3_3_2_16.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__scalatest_flatspec_3_3_2_16.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__scalatest_freespec_3_3_2_16.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__scalatest_funspec_3_3_2_16.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__scalatest_funsuite_3_3_2_16.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__scalatest_matchers_core_3_3_2_16.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__scalatest_mustmatchers_3_3_2_16.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__scalatest_propspec_3_3_2_16.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__scalatest_refspec_3_3_2_16.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__scalatest_shouldmatchers_3_3_2_16.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__scalatest_wordspec_3_3_2_16.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__scripted_plugin_2_12_1_9_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__shaded_apache_httpasyncclient_0_7_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__shaded_jawn_parser_2_12_0_9_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__shaded_scalajson_2_12_1_0_0_M4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__sjson_new_core_2_12_0_9_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__sjson_new_murmurhash_2_12_0_9_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__sjson_new_scalajson_2_12_0_9_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__slf4j_api_1_7_36.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__sourcecode_3_0_3_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__ssl_config_core_2_12_0_6_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__task_system_2_12_1_9_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__tasks_2_12_1_9_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__template_resolver_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__test_agent_1_9_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__test_interface_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__testing_2_12_1_9_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__util_cache_2_12_1_9_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__util_control_2_12_1_9_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__util_interface_1_9_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__util_logging_2_12_1_9_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__util_position_2_12_1_9_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__util_relation_2_12_1_9_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__util_tracking_2_12_1_9_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__zero_allocation_hashing_0_10_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__zinc_2_12_1_9_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__zinc_apiinfo_2_12_1_9_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__zinc_classfile_2_12_1_9_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__zinc_classpath_2_12_1_9_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__zinc_compile_2_12_1_9_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__zinc_compile_core_2_12_1_9_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__zinc_core_2_12_1_9_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__zinc_lm_integration_2_12_1_9_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__zinc_persist_2_12_1_9_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BSP__zinc_persist_core_assembly_1_9_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/root-build.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/root.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/scala_compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/scala_compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.sbt" beforeDir="false" afterPath="$PROJECT_DIR$/build.sbt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/build.properties" beforeDir="false" afterPath="$PROJECT_DIR$/project/build.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/active.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$561ce4ac40d05908a17d$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$561ce4ac40d05908a17d.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$561ce4ac40d05908a17d.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$a6ad8b7f6926d826b726$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$a6ad8b7f6926d826b726.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$a6ad8b7f6926d826b726.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$c47f65d240bdfadd64e5$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$c47f65d240bdfadd64e5.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$c47f65d240bdfadd64e5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$e9cbadb7d0e2ef982e41$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$e9cbadb7d0e2ef982e41.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$e9cbadb7d0e2ef982e41.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$fa77cef4eb2620362634$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$fa77cef4eb2620362634.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$fa77cef4eb2620362634.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/update/update_cache_2.12/inputs" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/update/update_cache_2.12/inputs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/update/update_cache_2.12/output" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/update/update_cache_2.12/output" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/_global/dependencyPositions/_global/streams/update_cache_2.12/input_dsp" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/_global/dependencyPositions/_global/streams/update_cache_2.12/input_dsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/_global/dependencyPositions/_global/streams/update_cache_2.12/output_dsp" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/_global/dependencyPositions/_global/streams/update_cache_2.12/output_dsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/dependencyClasspath/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/dependencyClasspath/_global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/externalDependencyClasspath/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/externalDependencyClasspath/_global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/managedClasspath/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/managedClasspath/_global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/dependencyClasspath/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/dependencyClasspath/_global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/externalDependencyClasspath/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/externalDependencyClasspath/_global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/fullClasspath/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/fullClasspath/_global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/managedClasspath/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/managedClasspath/_global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/compiler/Ast.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/compiler/ast/Ast.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/compiler/ExpressionParser.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/compiler/parser/ExpressionParser.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/compiler/LexicalParser.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/compiler/parser/LexicalParser.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/compiler/StatementParser.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/compiler/parser/StatementParser.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/compiler/main.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/compiler/main.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/scala/compiler/TestUtil.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/compiler/utils/TestUtil.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/scala/compiler/expression/AExpressionParserTest.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/compiler/expression/AExpressionParserTest.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/scala/compiler/expression/IdentifierParserTest.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/compiler/expression/IdentifierParserTest.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/scala/compiler/expression/NameParserTest.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/compiler/expression/NameParserTest.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/scala/compiler/expression/NumberParserTest.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/compiler/expression/NumberParserTest.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/scala/compiler/lexical/KeywordParserTest.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/compiler/lexical/KeywordParserTest.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/scala/compiler/lexical/LexicalParserTest.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/compiler/lexical/LexicalParserTest.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/scala/compiler/statement/AssignmentParserTest.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/compiler/statement/AssignmentParserTest.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/scala/compiler/statement/IfStatementParserTest.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/compiler/statement/IfStatementParserTest.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/scala/compiler/statement/ModelParserTest.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/compiler/statement/ModelParserTest.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/.history3" beforeDir="false" afterPath="$PROJECT_DIR$/target/.history3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/global-logging/sbt-global-log10135383754710227512.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/global-logging/sbt-global-log10687120695928417089.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/global-logging/sbt-global-log14656888889545104216.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/global-logging/sbt-global-log17802312650030731220.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/global-logging/sbt-global-log3516834135827730159.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/global-logging/sbt-global-log7035241857396888184.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$ABinOp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$ABinary$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$ABinary.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$Abstract$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$Abstract.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$Add$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$And$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$Annotation$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$Annotation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$ArrayValue$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$ArrayValue.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$Assign$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$Assign.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$AssignMultiple$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$AssignMultiple.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$BBinOp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$BBinary$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$BBinary.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$Block.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$BlockExpr$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$BlockExpr.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$BlockStmt$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$BlockStmt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$BoolConst$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$BoolConst.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$Case$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$Case.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$ClassModel$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$ClassModel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$CurlyBraceBlock$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$CurlyBraceBlock.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$Divide$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$DoubleConst$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$DoubleConst.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$Equal$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$Equals$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$Equals.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$ExprAsStmt$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$ExprAsStmt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$Expression.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$Extends$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$Extends.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$Field$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$Field.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$File$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$File.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$Final$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$Final.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$FloatConst$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$FloatConst.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$For$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$For.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$Greater$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$GreaterEqual$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$Identifier$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$Identifier.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$If$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$If.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$Import$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$Import.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$Inherits$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$Inherits.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$Inline$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$Inline.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$IntConst$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$IntConst.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$IntObject$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$IntObject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$Lambda$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$Lambda.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$Less$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$LessEqual$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$LongConst$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$LongConst.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$Match$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$Match.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$Method$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$Method.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$MethodCall$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$MethodCall.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$Model.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$Modifier.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$ModuleHeader$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$ModuleHeader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$Multiply$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$Name$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$Name.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$NameSpace$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$NameSpace.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$Negate$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$Negate.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$NestedExpr$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$NestedExpr.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$NewClassInstance$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$NewClassInstance.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$Not$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$Not.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$ObjectModel$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$ObjectModel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$Operator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$Or$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$PackageLocal$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$PackageLocal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$Private$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$Private.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$Protected$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$Protected.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$Public$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$Public.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$Pure$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$Pure.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$QualName$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$QualName.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$RBinOp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$RBinary$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$RBinary.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$Reassign$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$Reassign.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$Ref.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$RefLocal$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$RefLocal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$RefQual$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$RefQual.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$RefSpecial$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$RefSpecial.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$Return$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$Return.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$SpecialRef.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$SpecialRefAsExpr$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$SpecialRefAsExpr.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$Statement.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$StringLiteral$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$StringLiteral.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$Subtract$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$Super$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$Super.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$Ternary$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$Ternary.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$This$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$This.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$TraitModel$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$TraitModel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$Tuple$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$Tuple.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$Type$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$Type.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$TypeRel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$While$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST$While.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/AST.tasty" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/ExpressionParser$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/ExpressionParser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/ExpressionParser.tasty" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/LexicalParser$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/LexicalParser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/LexicalParser.tasty" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/StatementParser$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/StatementParser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/compiler/StatementParser.tasty" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/main$package$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/main$package.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/main$package.tasty" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/classes/main.tasty" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/sync/copy-resource" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/test-classes/compiler/TestUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-3.3.0/test-classes/compiler/TestUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/test-classes/compiler/TestUtil.tasty" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-3.3.0/test-classes/compiler/TestUtil.tasty" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/test-classes/compiler/expression/AExpressionParserTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-3.3.0/test-classes/compiler/expression/AExpressionParserTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/test-classes/compiler/expression/AExpressionParserTest.tasty" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-3.3.0/test-classes/compiler/expression/AExpressionParserTest.tasty" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/test-classes/compiler/expression/IdentifierParserTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-3.3.0/test-classes/compiler/expression/IdentifierParserTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/test-classes/compiler/expression/IdentifierParserTest.tasty" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-3.3.0/test-classes/compiler/expression/IdentifierParserTest.tasty" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/test-classes/compiler/expression/NameParserTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-3.3.0/test-classes/compiler/expression/NameParserTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/test-classes/compiler/expression/NameParserTest.tasty" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-3.3.0/test-classes/compiler/expression/NameParserTest.tasty" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/test-classes/compiler/expression/NumberParserTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-3.3.0/test-classes/compiler/expression/NumberParserTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/test-classes/compiler/expression/NumberParserTest.tasty" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-3.3.0/test-classes/compiler/expression/NumberParserTest.tasty" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/test-classes/compiler/lexical/KeywordParserTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-3.3.0/test-classes/compiler/lexical/KeywordParserTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/test-classes/compiler/lexical/KeywordParserTest.tasty" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-3.3.0/test-classes/compiler/lexical/KeywordParserTest.tasty" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/test-classes/compiler/lexical/LexicalParserTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-3.3.0/test-classes/compiler/lexical/LexicalParserTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/test-classes/compiler/lexical/LexicalParserTest.tasty" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-3.3.0/test-classes/compiler/lexical/LexicalParserTest.tasty" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/test-classes/compiler/statement/AssignmentParserTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-3.3.0/test-classes/compiler/statement/AssignmentParserTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/test-classes/compiler/statement/AssignmentParserTest.tasty" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-3.3.0/test-classes/compiler/statement/AssignmentParserTest.tasty" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/test-classes/compiler/statement/IfStatementParserTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-3.3.0/test-classes/compiler/statement/IfStatementParserTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/test-classes/compiler/statement/IfStatementParserTest.tasty" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-3.3.0/test-classes/compiler/statement/IfStatementParserTest.tasty" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/test-classes/compiler/statement/ModelParserTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-3.3.0/test-classes/compiler/statement/ModelParserTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/test-classes/compiler/statement/ModelParserTest.tasty" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-3.3.0/test-classes/compiler/statement/ModelParserTest.tasty" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/test-sync/copy-resource" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/test-zinc/inc_compile_3.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/update/update_cache_3/inputs" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-3.3.0/update/update_cache_3/inputs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/update/update_cache_3/output" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-3.3.0/update/update_cache_3/output" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.3.0/zinc/inc_compile_3.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/_global/_global/_global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/_global/_global/csrLogger/_global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/_global/_global/csrLogger/_global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/_global/dependencyPositions/_global/streams/update_cache_3/input_dsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/_global/dependencyPositions/_global/streams/update_cache_3/input_dsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/_global/dependencyPositions/_global/streams/update_cache_3/output_dsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/_global/dependencyPositions/_global/streams/update_cache_3/output_dsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/_global/scalaCompilerBridgeScope/_global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/_global/updateClassifiers/_global/streams/update_cache_3/inputs" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/_global/updateClassifiers/_global/streams/update_cache_3/inputs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/_global/updateClassifiers/_global/streams/update_cache_3/output" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/_global/updateClassifiers/_global/streams/update_cache_3/output" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/compile/_global/_global/compileOutputs/previous" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/compile/_global/_global/discoveredMainClasses/data" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/compile/bspReporter/_global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/compile/compile/_global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/compile/compileIncremental/_global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/compile/compileIncremental/_global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/compile/copyResources/_global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/compile/dependencyClasspath/_global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/compile/exportedProducts/_global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/compile/externalDependencyClasspath/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/externalDependencyClasspath/_global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/compile/incOptions/_global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/compile/internalDependencyClasspath/_global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/compile/internalDependencyClasspath/_global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/compile/managedClasspath/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/managedClasspath/_global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/runtime/exportedProducts/_global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/runtime/externalDependencyClasspath/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/runtime/externalDependencyClasspath/_global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/runtime/managedClasspath/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/runtime/managedClasspath/_global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/test/_global/_global/compileOutputs/previous" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/test/_global/_global/definedTestNames/data" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/test/_global/_global/dependencyClasspathFiles/previous" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/test/_global/_global/discoveredMainClasses/data" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/test/bspReporter/_global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/test/compile/_global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/test/compileIncremental/_global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/test/compileIncremental/_global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/test/copyResources/_global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/test/definedTests/_global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/test/dependencyClasspath/_global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/test/exportedProducts/_global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/test/externalDependencyClasspath/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/test/externalDependencyClasspath/_global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/test/fullClasspath/_global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/test/incOptions/_global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/test/internalDependencyClasspath/_global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/test/internalDependencyClasspath/_global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/test/loadedTestFrameworks/_global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/test/managedClasspath/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/test/managedClasspath/_global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/test/scalacOptions/_global/streams/out" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,82 +465,107 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="ExternalProjectsManager">
+    <system id="SBT">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="compiler" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
   </component>
-  <component name="ProjectId" id="2UMDrQXyCZabfl9b82LhRMnNxXR" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="2UUYmpCYz0N2AWxv9dspm6F2Msc" />
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;scala_project_settings_configurable.last_selected_tab_index&quot;: &quot;6&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.scala.settings.ScalaProjectSettingsConfigurable&quot;
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/micha/IdeaProjects/compiler/src/test&quot;
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\micha\IdeaProjects\compiler\src\test" />
+      <recent name="C:\Users\micha\IdeaProjects\compiler\src\test\scala\compiler" />
+      <recent name="C:\Users\micha\IdeaProjects\compiler\src\main\scala\compiler" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="compiler.expression" />
-      <recent name="compiler.statement" />
+      <recent name="compiler.integration" />
     </key>
   </component>
-  <component name="RunManager" selected="ScalaTest.ModelParserTest">
-    <configuration name="KeywordParserTest.Keyword parser should Should parse keywords" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true" nameIsGenerated="true" show_console_on_std_err="false" show_console_on_std_out="false">
-      <module name="root" />
+  <component name="RunManager" selected="ScalaTest.ModuleParserTest.Module parser should parse a module with contents">
+    <configuration name="compiler.main" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="compiler.main" />
+      <module name="compiler" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="compiler.utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="main" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="main" />
+      <module name="compiler" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AssignmentCompileTest.Assignment parser should compile" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true" nameIsGenerated="true" show_console_on_std_err="false" show_console_on_std_out="false">
+      <module name="compiler" />
       <option name="allowRunningInParallel" value="false" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
       </option>
       <option name="testKind" value="Test name" />
-      <option name="testClassPath" value="compiler.lexical.KeywordParserTest" />
-      <option name="testName" value="Keyword parser should Should parse keywords" />
+      <option name="testClassPath" value="compiler.integration.AssignmentCompileTest" />
+      <option name="testName" value="Assignment parser should compile" />
       <method v="2">
         <option name="Make" enabled="true" />
-        <option name="BSP.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ModelParserTest" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true" nameIsGenerated="true" show_console_on_std_err="false" show_console_on_std_out="false">
-      <module name="root" />
+    <configuration name="ModuleParserTest.Module parser should parse a module with contents" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true" nameIsGenerated="true" show_console_on_std_err="false" show_console_on_std_out="false">
+      <module name="compiler" />
       <option name="allowRunningInParallel" value="false" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
       </option>
-      <option name="testKind" value="Class" />
-      <option name="testClassPath" value="compiler.statement.ModelParserTest" />
+      <option name="testKind" value="Test name" />
+      <option name="testClassPath" value="compiler.statement.ModuleParserTest" />
+      <option name="testName" value="Module parser should parse a module with contents" />
       <method v="2">
         <option name="Make" enabled="true" />
-        <option name="BSP.BeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="NameParserTest" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true" nameIsGenerated="true" show_console_on_std_err="false" show_console_on_std_out="false">
-      <module name="root" />
-      <option name="allowRunningInParallel" value="false" />
-      <option name="projectPathOnTarget" />
-      <option name="selectedOptions">
-        <list />
-      </option>
-      <option name="testKind" value="Class" />
-      <option name="testClassPath" value="compiler.expression.NameParserTest" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-        <option name="BSP.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="ScalaTest.ModelParserTest" />
-        <item itemvalue="ScalaTest.KeywordParserTest.Keyword parser should Should parse keywords" />
-        <item itemvalue="ScalaTest.NameParserTest" />
+        <item itemvalue="ScalaTest.ModuleParserTest.Module parser should parse a module with contents" />
+        <item itemvalue="ScalaTest.AssignmentCompileTest.Assignment parser should compile" />
+        <item itemvalue="Application.compiler.main" />
+        <item itemvalue="Application.main" />
       </list>
     </recent_temporary>
   </component>
@@ -154,16 +575,12 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="35fe1c8d-0417-4314-9979-acf8b23a902b" name="Changes" comment="" />
-      <created>1692740755249</created>
+      <changelist id="811461ce-d18c-4a88-99a6-d7a3b29d3c35" name="Changes" comment="" />
+      <created>1692995789646</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1692740755249</updated>
+      <updated>1692995789646</updated>
     </task>
     <servers />
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
   </component>
 </project>

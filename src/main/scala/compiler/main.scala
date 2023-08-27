@@ -1,3 +1,5 @@
+package compiler
+
 import fastparse.*
 import NoWhitespace.*
 

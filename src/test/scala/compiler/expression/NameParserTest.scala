@@ -1,7 +1,8 @@
 package compiler.expression
 
-import compiler.AST.*
-import compiler.{ExpressionParser, TestUtil}
+import compiler.ast.Ast.*
+import compiler.parser.ExpressionParser
+import compiler.utils.TestUtil
 import org.scalatest.flatspec.AnyFlatSpec
 import org.scalatest.matchers.should
 

@@ -1,7 +1,8 @@
 package compiler.statement
 
-import compiler.AST.*
-import compiler.{LexicalParser, StatementParser, TestUtil}
+import compiler.ast.Ast.*
+import compiler.parser.{LexicalParser, StatementParser}
+import compiler.utils.TestUtil
 import org.scalatest.*
 import org.scalatest.flatspec.*
 import org.scalatest.matchers.*
@@ -16,7 +17,7 @@ class IfStatementParserTest extends AnyFlatSpec with should.Matchers {
     val code = "if(true){ x }"
 
     TestUtil.check(code, StatementParser.statementParser) shouldBe
-      If(Identifier(Name("true")), CurlyBraceBlock(ArrayBuffer(ExprAsStmt(Identifier(Name("x"))))), None)
+      If(Identifier(Name("true")), CurlyBraceBlock(Seq(ExprAsStmt(Identifier(Name("x"))))), None)
   }
 
 

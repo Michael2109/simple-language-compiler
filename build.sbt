@@ -9,3 +9,4 @@ lazy val root = (project in file("."))
 
 libraryDependencies += "com.lihaoyi" %% "fastparse" % "3.0.2"
 libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.16" % "test"
+libraryDependencies += "org.scala-lang.modules" % "scala-asm" % "9.5.0-scala-1"

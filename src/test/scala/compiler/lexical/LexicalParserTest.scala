@@ -1,7 +1,8 @@
 package compiler.lexical
 
-import compiler.AST.*
-import compiler.{LexicalParser, TestUtil}
+import compiler.ast.Ast.*
+import compiler.parser.LexicalParser
+import compiler.utils.TestUtil
 import org.scalatest.*
 import org.scalatest.flatspec.*
 import org.scalatest.matchers.*
